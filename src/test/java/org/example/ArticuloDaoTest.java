@@ -31,7 +31,7 @@ class ArticuloDaoTest {
     }
 
     @Test
-    void save() throws SQLException { // pruebo si el metodo save() gurda un valor de forma adecuada
+    void save() throws SQLException { // pruebo si el metodo save() guarda un valor de forma adecuada
         // given: Donde ponemos los datos
         // creo una conexión con la base de datos
         var conn = Database.instance().getConnection();
@@ -67,7 +67,7 @@ class ArticuloDaoTest {
         }
 
     @Test
-    void delete() throws SQLException{
+    void delete() throws SQLException{ // testeo si el método delete borra un artículo 
         // given: Donde ponemos los datos
         // creo una conexión con la base de datos
         var conn = Database.instance().getConnection();
@@ -94,5 +94,5 @@ class ArticuloDaoTest {
         // si aún está alli es que no fue borrado
         Assertions.assertFalse(result, "Error el objeto sigue en la base de datos");
     }
-    
+
 }
